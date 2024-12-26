@@ -1,0 +1,20 @@
+.cyber-glow {
+  text-shadow: 0 0 10px var(--accent),
+               0 0 20px var(--accent),
+               0 0 30px var(--accent-2);
+}
+
+.cyber-border {
+  position: relative;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent),
+              inset 0 0 10px var(--accent);
+}
+
+.cyber-grid {
+  background-image: linear-gradient(var(--accent) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center center;
+  opacity: 0.1;
+}

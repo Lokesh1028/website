@@ -1,0 +1,65 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    text-shadow: 4px 0 #ff00ff, -4px 0 #00ffff;
+  }
+  60% {
+    transform: translate(2px, 2px);
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
+  80% {
+    transform: translate(2px, -2px);
+    text-shadow: none;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid currentColor;
+  animation: typewriter 2.5s steps(40) 1s forwards,
+             blink 0.75s step-end infinite;
+}
+
+.glitch-text {
+  animation: glitch 0.5s infinite;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}

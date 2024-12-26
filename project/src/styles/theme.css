@@ -1,0 +1,26 @@
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #9d00ff;
+  --space-black: #030014;
+  --deep-space: #050327;
+  --nebula-purple: #1a0b2e;
+  --star-white: #ffffff;
+}
+
+.dark {
+  --bg-primary: var(--space-black);
+  --bg-secondary: var(--deep-space);
+  --text-primary: var(--star-white);
+  --text-secondary: #b4b4d9;
+  --accent: var(--neon-blue);
+  --accent-2: var(--neon-purple);
+}
+
+.light {
+  --bg-primary: var(--deep-space);
+  --bg-secondary: var(--nebula-purple);
+  --text-primary: var(--star-white);
+  --text-secondary: #b4b4d9;
+  --accent: var(--neon-blue);
+  --accent-2: var(--neon-purple);
+}

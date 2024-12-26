@@ -1,0 +1,48 @@
+@import 'styles/theme.css';
+@import 'styles/effects.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Rajdhani', sans-serif;
+    @apply bg-gradient-to-br from-[var(--bg-primary)] to-[var(--bg-secondary)];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  code, pre {
+    font-family: 'Share Tech Mono', monospace;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-orbitron text-4xl md:text-5xl font-bold mb-12 text-center cyber-glow;
+    background: linear-gradient(to right, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-content {
+    @apply font-rajdhani text-lg leading-relaxed;
+  }
+
+  .cyber-button {
+    @apply px-6 py-2 font-orbitron text-sm uppercase tracking-wider
+           border border-[var(--accent)] rounded
+           transition-all duration-300
+           hover:bg-[var(--accent)] hover:text-white
+           hover:shadow-[0_0_15px_var(--accent)];
+  }
+}
